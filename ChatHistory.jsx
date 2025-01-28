@@ -2,10 +2,10 @@ import React from "react";
 
 const ChatHistory = ({ messages }) => {
   return (
-    <div className="chat-history">
-      {messages.map((msg, index) => (
-        <div key={index} className={`message ${msg.sender}`}>
-          {msg.text}
+    <div>
+      {messages.map((msg) => (
+        <div key={msg.id} style={{ marginBottom: "10px" }}>
+          <strong>{msg.sender}:</strong> {msg.text}
         </div>
       ))}
     </div>
